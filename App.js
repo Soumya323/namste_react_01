@@ -1,9 +1,39 @@
 import React from "react";
-import  ReactDOM  from "react-dom/client";
+import ReactDOM from "react-dom/client";
 
-const heading1 = React.createElement("h1", {id:"heading1", key:"1"}, "I am h1 tag. do you know me 🚀");
-const heading2 = React.createElement("h1", {id:"heading2", key:"2"}, "No I am the h1 tag.");
-const child = React.createElement("div", {id:"child"},[heading1, heading2] );
+
+const heading = React.createElement("h1", {id:"heading1"}, "I am h1 tag.");
+const child = React.createElement("div", {id:"child"}, heading );
 const parent = React.createElement("div", {id:"parent"}, child );
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(parent);
+
+// // Plain JSX
+// const jsxHeading = <h1 id="heading">Namaste React using JSX</h1>;
+
+// const Title = () => {
+//     return (<h1>Namaste React Title</h1>);
+// }
+
+// // const HeadingComponent = () => {
+// //     return
+// //     (<div id="container">
+// //         <Title />
+// //         <h1>Namaste React Functional Component   </h1>
+// //     </div>);
+// // }
+
+// const number = 1000;
+// const HeadingComponent = () => {
+//     return (
+//         <div id="container">
+//             {/* <Title /> */}
+//             {Title()}
+//             <h1 id="heading">Namaste React using JSX</h1>
+//             <h2>The number is {number}</h2>
+//         </div>);
+// }
+
+
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// // root.render(<HeadingComponent />);
